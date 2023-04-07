@@ -146,6 +146,82 @@ a {
   bottom: 150px;
   left: 20px;
 }
+/* Slider Second */
+.slider-second {
+  position: relative;
+  padding-bottom: 50px;
+}
+.slider-second .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider-second .container .left-btn,
+.slider-second .container .right-btn {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--main-color);
+  border: 1px solid var(--main-color-alt);
+}
+.slider-second .container .left-btn i,
+.slider-second .container .right-btn i {
+  font-size: 30px;
+}
+.slider-container {
+  margin: 10px auto;
+  width: 800px;
+  height: 350px;
+  position: relative;
+}
+.slider-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+}
+.slider-container img.active {
+  opacity: 1;
+}
+.slider-controls {
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.container .prev.disabled,
+.container .next.disabled {
+  opacity: 30%;
+  cursor: no-drop;
+}
+.slider-controls .indicators {
+  width: 100%;
+}
+.slider-controls .indicators ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+.slider-controls .indicators ul li {
+  display: inline-block;
+  background-color: #f6f6f6;
+  color: #333;
+  font-weight: bold;
+  height: 28px;
+  width: 28px;
+  border-radius: 4px;
+  margin: 0 2px;
+  line-height: 28px;
+  cursor: pointer;
+}
+.slider-controls .indicators ul li.active {
+  background-color: var(--main-color);
+  color: #fff;
+}
 /* End Global Rules */
 
 /* Home Page */
@@ -405,7 +481,6 @@ a {
 .associatif .container .box .content .plus a {
   color: var(--main-color);
   font-weight: bold;
-  cursor: no-drop;
 }
 .associatif .container .more a {
   display: block;
@@ -664,7 +739,20 @@ a {
 .associative-boxes .container .box .content .plus a {
   color: var(--main-color);
   font-weight: bold;
-  cursor: no-drop;
+}
+.content .container p {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 18px;
+}
+.content .container p:first-of-type {
+  text-indent: 5%;
+}
+.content .container p span {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 25px;
 }
 /* End Dossier Associatif */
 
